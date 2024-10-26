@@ -22,3 +22,6 @@
   font-feature-settings:  var(--maint-font);
   background-image: repeating-linear-gradient();
 }
+.header__title {
+  font-family: var(--accent-font);
+}
