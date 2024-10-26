@@ -1,1 +1,10 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --accent-font: PressSrart2p,sans-serif;
+    --main-font: Inter-Variable,sans-serif;
+    --wg-main-font: 400;
+    --wg-title-font: 700;
+    --accent-font-wg: 400;
+    --accent-color: #000;
+    --bg-color: #fff; 
+}
