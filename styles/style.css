@@ -19,9 +19,67 @@
   min-block-size: 100dvb;
   background-color: var(--bg-color);
   color: var(--accent-color);
-  font-feature-settings:  var(--maint-font);
-  background-image: repeating-linear-gradient();
+  font-feature-settings: 'wght' var(--wg-main-font);
+  background-image: repeating-linear-gradient(to left,#d3d3d3, transparent 2px), repeating-linear-gradient(90deg, #e7e7e7,transparent 2px);
+  font-size: var(--main-font-size);
+  font-family: var(--main-font);
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 327px;
+  justify-content: center;
 }
 .header__title {
+  text-transform: uppercase;
+  font-weight: var( --accent-font-wg);
+  font-size: 49px;
+}
+.page__section {
   font-family: var(--accent-font);
+  font-size: var(--accent-font);
+}
+.section__title {
+  font-variation-settings: 'wght' var(--wg-title-font);
+}
+.subtitle {
+  padding: 20px 0 25px;
+}
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1vi;
+}
+.theme-menu__button {
+  border: transparent;
+  transition: none;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: transparent;
+  background-image: ;
+}
+.theme-menu__button:hover,
+.theme-menu__button:focus {
+  color: rgba(0, 0, 0, 0.6);
+  transition: color 0.3s ease;
+  outline: none;
+}
+.theme-menu__button[disabled] {
+  pointer-events: none;
+}
+.theme-menu__button::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 3px;
+  margin-top: 3px;
+  background-color:  rgba(0, 0, 0, 0.6);
+  transition: width 0.3s ease;
+}
+.theme-menu__button:focus-visible::after {
+  width: 100%;
+}
+.theme-menu__button:focus-visible {
+  outline: none;
 }
