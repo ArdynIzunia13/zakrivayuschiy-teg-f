@@ -128,11 +128,19 @@
   position: absolute;
   top: 3.3vh;
   right: 1.4vw;
+  mix-blend-mode: hard-light;
    text-shadow:
-    -1px 0 rgba(255, 255, 255, 0.6), 
-   0 1px rgba(255, 255, 255, 0.6), 
-   1px 0 rgba(255, 255, 255, 0.6), 
-   0 -1px rgba(255, 255, 255, 0.6);
+    -1px 0 var(--subtitle-color), 
+   0 1px var(--subtitle-color), 
+   1px 0 var(--subtitle-color), 
+   0 -1px var(--subtitle-color);
+}
+@supports((text-stroke: 1px var(--subtitle-color)) or  (-webkit-text-stroke: 1px var(--subtitle-color))){
+  .layble__container .subtitle {
+    -webkit-text-stroke: 1px var(--subtitle-color);
+    text-stroke: 1px var(--subtitle-color);
+    text-shadow: none;
+  }
 }
 .car__image {
   object-fit: cover;
@@ -146,16 +154,41 @@
     flex-direction: column;
     gap: 1.5em;
 }
+.button {
+  text-transform: uppercase;
+  font-family: var(--accent-font);
+  border: 2px solid var(--accent-color);
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.button:focus {
+  outline: none;
+}
+.button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px var(--accent-color);
+}
+.button::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+  display: block;
+  background-color: var(--accent-color);
+  transition: transform 0.5s ease-in-out;
+}
+.button:hover::before {
+  transform: scaleX(1);
+}
 .like__button {
   width: 130px;
   height: 38px;
-  text-transform: uppercase;
-  font-family: var(--accent-font);
   display: flex;
   align-items: center;
   gap: 10px;
-  border: 2px solid var(--accent-color);
-  background-color: transparent;
 }
 .button__text {
   display: flex;
