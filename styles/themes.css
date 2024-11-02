@@ -10,12 +10,14 @@
     --accent-color: #000;
     --bg-color: #fff; 
     --subtitle-color:rgba(255, 255, 255, 0.6);
+    --blend-color: #fff;
 }
 :root.theme-dark {
     --wg-main-font: 465;
     --wg-title-font: 785;
     --accent-color: #00CC14;
     --bg-color: #000;
+    --blend-color: #00CC14;
     --subtitle-color:rgba(0, 204, 20, 0.6);
 }
 @media (prefers-color-scheme: dark) {
@@ -24,6 +26,7 @@
     --wg-title-font: 785;
     --accent-color: #00CC14;
     --bg-color: #000;
+    --blend-color: #00CC14;
     --subtitle-color:rgba(0, 204, 20, 0.6);
     }
 }
