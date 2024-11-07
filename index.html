@@ -81,13 +81,15 @@
          </svg><span class="button__text">Сохранить на память</span>
         </button>
         <dialog class="dialog__window" id="dialog-id">
-          <div class="dialog__content">
+          <article class="dialog__article">
+            <div class="dialog__content">
             <svg class="disc__svg" viewBox="0 0 29 28">
               <use href="./svg/image.svg#floopy">
              </svg>
-             <p class="dialog__text subtitle">Вставьтедискету, чтобы продолжить</p>
-             <button class="dialog__button button" type="submit" onclick="window['dialog-id'].close()">ок</button>
-          </div>
+             <p class="dialog__text subtitle">Вставьте дискету, чтобы продолжить</p>
+            </div>
+             <button class="dialog__button button" type="submit" onclick="window['dialog-id'].close()"><span class="button__text">ок</span></button>
+          </article>
         </dialog>
       </div>
     </footer>

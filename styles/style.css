@@ -23,10 +23,11 @@
   background-color: var(--bg-color);
   color: var(--accent-color);
   font-feature-settings: 'wght' var(--wg-main-font);
-  background-image: repeating-linear-gradient(#d3d3d3, transparent 2px), repeating-linear-gradient(90deg, #e7e7e7,transparent 2px);
+  background-image: repeating-linear-gradient(var(--repeat-gradient)), repeating-linear-gradient(90deg, var(--repeat-gradient)),linear-gradient(var(--linear-gradient));
   font-size: var(--main-font-size);
   font-family: var(--main-font);
   background-attachment: fixed;
+  background-size: cover;
 }
 .header {
   display: flex;
@@ -305,17 +306,17 @@
   mix-blend-mode: difference;
 }
 .dialog__window {
-  
-  justify-content: center;
-  align-items: center;
   width: clamp(21.313rem, 21.048rem + 1.13vw, 22.063rem);
   block-size: 191px;
+  background-color: var(--bg-color);
+  color: var(--accent-color);
 }
 .dialog__window::backdrop {
   background-color: rgba(0, 0, 0, 0.75);
 }
-.dialog__content {
+.dialog__article {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+.dialog

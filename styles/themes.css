@@ -12,6 +12,8 @@
     --subtitle-color:rgba(255, 255, 255, 0.6);
     --blend-color: #fff;
     --contour-heart:var(--accent-color);
+    --repeat-gradient: #d3d3d3 0 2px, transparent 2px 4px;
+    --linear-gradient: #e7e7e7 0.01%, #1a1a1a 100%;
 }
 :root.theme-dark {
     --wg-main-font: 465;
@@ -21,6 +23,8 @@
     --blend-color: #00CC14;
     --subtitle-color:rgba(0, 204, 20, 0.6);
     --contour-heart:var(--accent-color);
+    --repeat-gradient: #000 0 2px, transparent 2px 4px;
+    --linear-gradient: #007f0c 0.01%, #004306 100%;
 }
 @media (prefers-color-scheme: dark) {
     :root {
@@ -31,5 +35,7 @@
     --blend-color: #00CC14;
     --subtitle-color:rgba(0, 204, 20, 0.6);
     --contour-heart:var(--accent-color);
+    --repeat-gradient: #000 0 2px, transparent 2px 4px;
+    --linear-gradient: #007f0c 0.01%, #004306 100%;
     }
 }
