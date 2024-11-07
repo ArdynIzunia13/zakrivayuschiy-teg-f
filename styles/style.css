@@ -223,6 +223,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 8px;
   background-color: var(--bg-color);
   width: 306px;
   height: 84px;
@@ -295,4 +297,25 @@
   to {
     opacity: 1;
   }
+}
+.disc__svg {
+  fill: var(--blend-color);
+  width: 28px;
+  height: 28px;
+  mix-blend-mode: difference;
+}
+.dialog__window {
+  
+  justify-content: center;
+  align-items: center;
+  width: clamp(21.313rem, 21.048rem + 1.13vw, 22.063rem);
+  block-size: 191px;
+}
+.dialog__window::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.dialog__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }

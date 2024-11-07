@@ -75,9 +75,20 @@
     </main>
     <footer class="footer">
       <div class="button__container">
-        <button class="button button__footer" type="button"><span class="button__text">Сохранить на память</span>
+        <button class="button button__footer" type="button" onclick="window['dialog-id'].showModal()" aria-controls="dialog-id">
+          <svg class="disc__svg" viewBox="0 0 29 28">
+          <use href="./svg/image.svg#floopy">
+         </svg><span class="button__text">Сохранить на память</span>
         </button>
-        <dialog class="dialog__window"></dialog>
+        <dialog class="dialog__window" id="dialog-id">
+          <div class="dialog__content">
+            <svg class="disc__svg" viewBox="0 0 29 28">
+              <use href="./svg/image.svg#floopy">
+             </svg>
+             <p class="dialog__text subtitle">Вставьтедискету, чтобы продолжить</p>
+             <button class="dialog__button button" type="submit" onclick="window['dialog-id'].close()">ок</button>
+          </div>
+        </dialog>
       </div>
     </footer>
     <script src="./scripts/like.js"></script>
