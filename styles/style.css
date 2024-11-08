@@ -170,7 +170,6 @@
   color: var(--blend-color);
 }
 .button {
-  text-transform: uppercase;
   font-family: var(--accent-font);
   font-size: var(--accent-font-size);
   border: 2px solid var(--accent-color);
@@ -306,17 +305,40 @@
   mix-blend-mode: difference;
 }
 .dialog__window {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
   width: clamp(21.313rem, 21.048rem + 1.13vw, 22.063rem);
   block-size: 191px;
   background-color: var(--bg-color);
   color: var(--accent-color);
 }
+.dialog__window:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+}
 .dialog__window::backdrop {
   background-color: rgba(0, 0, 0, 0.75);
+}
+.dialog__text {
+  width: clamp(12.375rem, 11.583rem + 3.38vw, 14.625rem);
+  height: 4.5em;
 }
 .dialog__article {
   display: flex;
   flex-direction: column;
+}
+.dialog__content {
+  display: flex;
   gap: 10px;
 }
-.dialog
+.dialog__content .disc__svg {
+  width: 39px;
+  height: 39px;
+}
+.dialog__article .dialog__button {
+  padding: 12.5px;
+  text-transform: uppercase;
+}
