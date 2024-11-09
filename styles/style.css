@@ -118,6 +118,7 @@
 }
 .section {
   inline-size: clamp(23.438rem, 16.373rem + 30.14vw, 43.5rem);
+  margin-block-end: 50px;
 }
 .article {
   display: flex;
