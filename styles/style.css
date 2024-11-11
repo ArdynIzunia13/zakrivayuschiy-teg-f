@@ -52,6 +52,9 @@
 }
 .section__title {
   font-variation-settings: 'wght' var(--wg-title-font);
+  font-size: 18px;
+  line-height: 2;
+  padding-left: 10px;
 }
 .header .subtitle {
   padding: 20px 0 25px;
@@ -67,6 +70,7 @@
   display: flex;
   flex-direction: column;
   gap: 1vi;
+  align-items: center;
 }
 .theme-menu__button {
   border: transparent;
@@ -75,6 +79,7 @@
   text-decoration: none;
   background-color: transparent;
   position: relative;
+  text-transform: uppercase;
 }
 .theme-menu__button:hover,
 .theme-menu__button:focus {
@@ -131,8 +136,8 @@
 }
 .layble__container .subtitle {
   position: absolute;
-  top: 3.3vh;
-  right: 1.4vw;
+  top: 2.5vh;
+  right: 1.5vw;
   mix-blend-mode: hard-light;
    text-shadow:
     -1px 0 var(--subtitle-color), 
@@ -165,7 +170,7 @@
 }
 .article__text {
   display: flex;
-  padding: var(--padding-text);
+  padding: var(--padding-text) var(--padding-text) 0;
   flex-direction: column;
   gap: 1.5em;
 }
@@ -173,7 +178,6 @@
   display: flex;
   justify-content: flex-end;
   padding: var(--padding-text);
-  gap: 10px;
 }
 .button__text {
   position: relative;
