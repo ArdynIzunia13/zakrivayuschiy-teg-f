@@ -53,8 +53,7 @@
 .section__title {
   font-variation-settings: 'wght' var(--wg-title-font);
   font-size: 18px;
-  line-height: 2;
-  padding-left: 10px;
+  padding: 7.5px 10px;
 }
 .header .subtitle {
   padding: 20px 0 25px;
@@ -69,8 +68,9 @@
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 1vi;
-  align-items: center;
+  gap: clamp(0.5vi, 1.5vi, 7px);
+  padding-bottom: 19px;
+  padding-left: 19px;
 }
 .theme-menu__button {
   border: transparent;
@@ -179,9 +179,9 @@
 }
 .article__text {
   display: flex;
-  padding: var(--padding-text) var(--padding-text) 0;
+  padding: var(--padding-text) 27px 0;
   flex-direction: column;
-  gap: 1.5em;
+  gap: clamp(1.27em, 6vi, 27px);
 }
 .button__container {
   display: flex;
@@ -367,9 +367,11 @@
 .dialog__article .dialog__button {
   padding: 12.5px;
   text-transform: uppercase;
+  inline-size: clamp(16.063rem, 15.27rem + 3.38vw, 18.313rem);
+  block-size: 38px;
 }
 @media (width <= 375px) {
-  .footer .button {
+  .footer .button:not(.dialog__button) {
     height: 84px;
     flex-direction: column;
   }
