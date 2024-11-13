@@ -59,6 +59,9 @@
   padding: 20px 0 25px;
   font-size: clamp(0.875rem, 0.677rem + 0.85vw, 1.438rem);
 }
+.car__image:not(.none,.greyscale,.saturate)~.subtitle {
+  text-transform: none;
+}
 .subtitle {
   font-family: var(--accent-font);
   font-size: var(--accent-font-size);
@@ -136,8 +139,8 @@
 }
 .layble__container .subtitle {
   position: absolute;
-  top: 2.5vh;
-  right: 1.5vw;
+  top: clamp(2.5vh, 3.5vh, 22px);
+  right: clamp(1.5vh, 3vi, 25px);
   mix-blend-mode: hard-light;
    text-shadow:
     -1px 0 var(--subtitle-color), 
@@ -156,8 +159,8 @@
   display: block;
   object-fit: cover;
   object-position: center;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
 }
 .greyscale {
   filter: grayscale(70%);
@@ -177,9 +180,12 @@
 .blur {
   filter: blur(11.5px);
 }
+.more-filters {
+  filter: grayscale(50%) sepia(60%) contrast(360%);
+}
 .article__text {
   display: flex;
-  padding: var(--padding-text) 27px 0;
+  padding: var(--padding-text) 1.5em 0;
   flex-direction: column;
   gap: clamp(1.27em, 6vi, 27px);
 }
@@ -224,8 +230,8 @@
   transform: scaleX(1);
 }
 .card__like-button {
-  width: 130px;
-  height: 38px;
+  inline-size: 9.5em;
+  block-size: 2.7em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -349,15 +355,17 @@
   background-color: rgba(0, 0, 0, 0.75);
 }
 .dialog__text {
-  width: clamp(12.375rem, 11.583rem + 3.38vw, 14.625rem);
-  height: 4.5em;
+  inline-size: clamp(12.375rem, 11.583rem + 3.38vw, 14.625rem);
 }
 .dialog__article {
   display: flex;
   flex-direction: column;
+  gap: 1.7em;
+  line-height: 21px;
 }
 .dialog__content {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 .dialog__content .disc__svg {
