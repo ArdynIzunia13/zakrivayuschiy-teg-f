@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-    --accent-font:  'Press Start 2P';
-    --main-font: Inter-Variable;
+    --accent-font:  'Press Start 2P', Fantasy;
+    --main-font: Inter-Variable, sans-serif;
     --wg-main-font: 400;
     --wg-title-font: 700;
     --accent-font-wg: 400;
@@ -10,4 +10,14 @@
     --accent-font-size: 14px;
     --main-font-size: 18px;
     --padding-text: 1.389em;
+
+    --wg-main-font: 465;
+    --wg-title-font: 785;
+    --accent-color: #00CC14;
+    --bg-color: #000;
+    --blend-color: #00CC14;
+    --subtitle-color:rgba(0, 204, 20, 0.6);
+    --contour-heart:var(--accent-color);
+    --repeat-gradient: #000 0 2px, transparent 2px 4px;
+    --linear-gradient: #007f0c 0.01%, #004306 100%;
 }
