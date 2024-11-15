@@ -10,14 +10,4 @@
     --accent-font-size: 14px;
     --main-font-size: 18px;
     --padding-text: 1.389em;
-
-    --wg-main-font: 465;
-    --wg-title-font: 785;
-    --accent-color: #00CC14;
-    --bg-color: #000;
-    --blend-color: #00CC14;
-    --subtitle-color:rgba(0, 204, 20, 0.6);
-    --contour-heart:var(--accent-color);
-    --repeat-gradient: #000 0 2px, transparent 2px 4px;
-    --linear-gradient: #007f0c 0.01%, #004306 100%;
 }

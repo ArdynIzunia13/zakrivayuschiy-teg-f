@@ -124,6 +124,7 @@
 .article {
   display: flex;
   flex-direction: column;
+  margin-block-end: 2.945em;
 }
 .layble__container {
   position: relative;
@@ -247,7 +248,7 @@
   outline: 2px solid var(--accent-color);
   outline-offset: -2px;
 }
-.footer .button{
+.button__footer{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -256,63 +257,14 @@
   inline-size: clamp(19.125rem, 18.487rem + 2.72vw, 20.938rem);
   block-size: 55px;
 }
-.footer .button__container {
-  padding-block-start: 0;
-}
-.sparks {
-  opacity: 0;
-}
-.contour {
-  fill: currentColor;
-  animation: contour 0.1s linear;
-}
-.like-icon {
-  transition: none;
-}
-.main-body {
-  fill: transparent;
-  transition: fill 0.3s linear;
-}
-.like-icon:hover .main-body {
-  fill: currentColor;
-  transition: fill 0.3s linear 0.05s;
-}
-.core {
-  fill: transparent;
-  transition: fill 0.3s linear 0.03s;
-}
-.like-icon:hover .core {
-  fill: currentColor;
-  transition: fill 0.3s linear;
-}
-.like-icon:active .main-body {
-  fill: red;
-  transition: fill 0.3s linear 0.05s;
-}
-.like-icon:active .core {
-  fill: red;
-  transition: fill 0.3s linear;
-}
-.like-icon:active .contour {
-  fill: red;
-  transition: fill 0.3s linear 0.06s;
-}
-.like-icon.is-liked .heart {
-  animation: heart 0.3s 0.1s ease-in alternate;
-}
-.like-icon.is-liked .main-body,
-.like-icon.is-liked .core,
-.like-icon.is-liked .contour {
-  fill: red;
-}
-.like-icon.is-liked .sparks {
-  opacity: 0;
-  animation: sparks 0.3s 0.3s ease-in alternate;
+.save__button {
+  display: flex;
+  justify-content: flex-end;
 }
 .disc__svg {
   fill: var(--blend-color);
-  inline-size: 28px;
-  block-size: 28px;
+  inline-size: 21px;
+  block-size: 21px;
   mix-blend-mode: difference;
 }
 .dialog__window {
@@ -356,8 +308,12 @@
   block-size: 38px;
 }
 @media (width <= 375px) {
-  .footer .button:not(.dialog__button) {
+  .save__button .button:not(.dialog__button) {
     height: 84px;
     flex-direction: column;
+  }
+  .disc__svg {
+    block-size: 28px;
+    inline-size: 28px;
   }
 }
