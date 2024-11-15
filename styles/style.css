@@ -145,7 +145,7 @@
    1px 0 var(--subtitle-color), 
    0 -1px var(--subtitle-color);
 }
-@supports((text-stroke: 1px var(--subtitle-color)) or  (-webkit-text-stroke: 1px var(--subtitle-color))){
+@supports((text-stroke: 1px var(--subtitle-color)) or  (-webkit-text-stroke: 1px var(--subtitle-color))) {
   .layble__text {
     -webkit-text-stroke: 1px var(--subtitle-color);
     text-stroke: 1px var(--subtitle-color);
@@ -248,7 +248,7 @@
   outline: 2px solid var(--accent-color);
   outline-offset: -2px;
 }
-.button__footer{
+.button__footer {
   display: flex;
   align-items: center;
   justify-content: center;
